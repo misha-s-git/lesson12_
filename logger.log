@@ -1,0 +1,1413 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:03:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:03:38] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:03:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:03:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:03:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:03:46] "[33mGET /...?s=123 HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 23, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:41] "[35m[1mGET /search?s=ага HTTP/1.1[0m" 500 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 23, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:42] "[35m[1mGET /search?s=ага HTTP/1.1[0m" 500 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 23, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:43] "[35m[1mGET /search?s=ага HTTP/1.1[0m" 500 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 23, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:47] "[35m[1mGET /search?s= HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:49] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 23, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:35:52] "[35m[1mGET /search?s=Ага HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:37:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:37:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 23, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:37:44] "[35m[1mGET /search?s=Ага HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 22, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:38:17] "[35m[1mGET /search?s=Ага HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:38:20] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:38:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 22, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:38:24] "[35m[1mGET /search?s=ага HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 22, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:40:27] "[35m[1mGET /search?s=ага HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:40:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:40:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:40:31] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:40:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 22, in search_page
+    return render_template("post_list.html", posts=posts, s=s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:40:33] "[35m[1mGET /search?s=Ага HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:45:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:45:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+ERROR:app:Exception on /search [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 22, in search_page
+    filtered_posts = search_post_by_substring(posts, s)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 138, in load
+    code = environment.compile(source, name, filename)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 758, in compile
+    self.handle_exception(source=source_hint)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 926, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\templates\post_list.html", line 15, in template
+    {% fog post in posts %}
+jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'fog'.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:45:47] "[35m[1mGET /search?s=ага HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:46:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:46:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:46:53] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:46:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:47:19] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:47:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:57:10] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:57:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:57:12] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:57:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:57:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 10:57:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:53:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:53:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:53:02] "GET /search?s=ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:53:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:55:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:55:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:55:50] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:55:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:56:25] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:56:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:56:30] "GET /search?s=УТРОМ HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:56:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:56:34] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 11:56:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:15:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:15:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:15:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:15:44] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:40] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:41] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:42] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+ERROR:app:Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\main\views.py", line 15, in main_page
+    return render_template("../loader/templates/templates/index.html")
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 149, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1071, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 1000, in get_template
+    return self._load_template(name, globals)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\environment.py", line 959, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 59, in get_source
+    return self._get_source_fast(environment, template)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\templating.py", line 95, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: ../loader/templates/templates/index.html
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:22:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:25:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:25:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:25:45] "GET /search?s=ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:25:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:26:10] "[33mGET /post HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:27:26] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:27:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:27:27] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:27:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:27:51] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 12:27:51] code 400, message Bad request syntax ('------WebKitFormBoundaryvM0nLpeAWT2tl0md')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:27:51] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:28:48] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:28:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:31:58] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:31:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:00] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:04] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 12:32:04] code 400, message Bad request syntax ('------WebKitFormBoundary7xG1agL61aLrEVWv')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:04] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:14] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 12:32:14] code 400, message Bad request syntax ('------WebKitFormBoundary0BGomnyfuzxdIDEZ')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:14] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:17] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 12:32:17] code 400, message Bad request syntax ('------WebKitFormBoundaryI5SzE43WxNrfcAiO')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:17] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:22] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:23] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 12:32:23] code 400, message Bad request syntax ('------WebKitFormBoundaryAhuhA0fx7NZPt1CU')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 12:32:23] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:02] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:06] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:08] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 15:16:08] code 400, message Bad request syntax ('------WebKitFormBoundary2GjwoxkHQDhIkHxD')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:16:08] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:39] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:44] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:48] "GET /search?s=п HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:53] "GET /search?s=ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:17:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:03] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:11] "GET /search?s=334535 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:12] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:24] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 15:18:24] code 400, message Bad request syntax ('------WebKitFormBoundaryqFhXPb0DnOeT6hYU')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:18:24] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:28:41] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:28:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:28:43] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:28:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1701, in make_response
+    raise TypeError(
+TypeError: The view function for 'loader_blueprint.create_new_post_by_user' did not return a valid response. The function either returned None or ended without a return statement.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:28:44] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:werkzeug:127.0.0.1 - - [02/May/2022 15:28:44] code 400, message Bad request syntax ('------WebKitFormBoundary4fYaQ7XBH5gjOYUi')
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:28:44] "[35m[1mNone /post HTTP/0.9[0m" HTTPStatus.BAD_REQUEST -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:46] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:47] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загружены, отсутствует часть данных
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:49] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:50] "GET /post HTTP/1.1" 200 -
+INFO:root:Данные не загружены, отсутствует часть данных
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:56] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:30:57] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:31:00] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:31:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загружены, отсутствует часть данных
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:31:02] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:31:03] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:20] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:50] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:50] "GET /uploads/images/123.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:57] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:46:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:02] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:02] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:16] "GET /search?s=new HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:16] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:16] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:32] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:47:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:11] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:11] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:18] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:20] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:29] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:29] "GET /uploads/images/1234.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:37] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:37] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:43] "GET /search?s=new HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:43] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 15:49:43] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:14:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:14:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:01] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:01] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:01] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:04] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:08] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:15:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 9, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:16:08] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 9, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:34] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 9, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:44] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:53] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:55] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:56] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:58] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:58] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:20:58] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:55] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:55] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:55] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:57] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:58] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:58] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:58] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:28:58] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:04] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:10] "GET /search?s=new HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:10] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:10] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:13] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 29, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 9, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:29:25] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 10, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:38] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 10, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:40] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:45] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 10, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:36:53] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:40:03] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:40:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:40:05] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:40:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {"pic": save_picture(picture), "content": content}
+  File "C:\Users\Михаил\PycharmProjects\lesson12_project_source_v3-master\loader\utils.py", line 10, in save_picture
+    raise WrongImgType(f"Неверный формат файла! Допустим только {', '.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла! Допустим только jpg, png, gif, jpeg
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:40:15] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1734, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a WrongImgType.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:43:56] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1734, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a WrongImgType.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:43:59] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:03] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:03] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:03] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:05] "GET /search?s=Ага HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:07] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1526, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1545, in finalize_request
+    response = self.make_response(rv)
+  File "C:\Users\Михаил\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1734, in make_response
+    raise TypeError(
+TypeError: The view function did not return a valid response. The return type must be a string, dict, tuple, Response instance, or WSGI callable, but it was a WrongImgType.
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:44:17] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:10] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:11] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:15] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:17] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:21] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:23] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:32] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:36] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:45:37] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:47:56] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:47:56] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:06] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:06] "GET /uploads/images/rc.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:11] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:14] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:18] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:48:20] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:49] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:49] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:49] "GET /uploads/images/rc.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:53] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:55] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:55] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:55] "[36mGET /uploads/images/1234.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:49:55] "[36mGET /uploads/images/rc.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:50:01] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:50:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:50:05] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:50:49] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:50:52] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 16:50:54] "GET /post HTTP/1.1" 200 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:02] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:02] "[33mGET /uploads/images/123.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:02] "[33mGET /uploads/images/1234.jpg HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:05:02] "[33mGET /uploads/images/rc.jpg HTTP/1.1[0m" 404 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:04] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:10] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:10] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:12] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:25] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:25] "GET /uploads/images/123.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:27] "GET /post HTTP/1.1" 200 -
+INFO:root:Открытие главной страницы
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Выполняется поиск
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:29] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [02/May/2022 17:06:29] "[36mGET /uploads/images/123.jpg HTTP/1.1[0m" 304 -
